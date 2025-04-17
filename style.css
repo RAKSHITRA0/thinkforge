@@ -1,0 +1,133 @@
+:root {
+  --bg: #fff8e1;         /* Light yellow background */
+  --text: #5d3a00;       /* Dark amber-brown text */
+  --card: #fff3cd;       /* Soft yellow card */
+  --border: #ffcc80;     /* Orange border */
+}
+
+#exportBtn {
+  padding: 8px;
+  background-color: #ff9800; /* Bright orange */
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.dark {
+  --bg: #3e2723;         /* Dark brown */
+  --text: #ffe0b2;       /* Pale orange text */
+  --card: #4e342e;       /* Muted chocolate card */
+  --border: #795548;     /* Warm brown border */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: var(--card);
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin: 0;
+}
+
+#searchInput {
+  margin: 8px 0;
+  padding: 6px;
+  width: 100%;
+  background-color: #fff3e0;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+#pageList {
+  list-style: none;
+  padding: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+#pageList li {
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+#pageList li.active, #pageList li:hover {
+  background-color: #ffb74d80; /* Semi-transparent orange */
+}
+
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.sidebar-buttons button {
+  padding: 8px;
+  background-color: #fb8c00; /* Deeper orange */
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editor-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pageTitle {
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text);
+}
+
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#saveStatus {
+  font-size: 0.9em;
+  color: #a1887f; /* Muted warm gray */
+}
+
+.editor {
+  flex-grow: 1;
+  padding: 12px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-top: 12px;
+  overflow-y: auto;
+}
