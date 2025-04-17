@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notion Turbo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <h2>📄 Pages</h2>
+        <input id="searchInput" placeholder="Search..." />
+      </div>
+      <ul id="pageList"></ul>
+      <div class="sidebar-buttons">
+        <button id="newPageBtn">+ New Page</button>
+        <button id="exportAllBtn">⬇ Export All</button>
+        <input type="file" id="importFile" style="display: none;" />
+        <button id="importAllBtn">⬆ Import All</button>
+        <button id="toggleDarkMode">🌗 Dark Mode</button>
+      </div>
+    </aside>
+    
+    <main class="editor-container">
+      <div class="editor-header">
+        <input type="text" id="pageTitle" placeholder="Untitled" />
+        <div class="editor-actions">
+          <button id="exportBtn">Export Page</button>
+          <span id="saveStatus">Saved</span>
+        </div>
+      </div>
+      <div id="editor" contenteditable="true" class="editor" placeholder="Start writing..."></div>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
